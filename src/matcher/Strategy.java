@@ -1,6 +1,9 @@
 package matcher;
 
+import person.Adult;
+import person.Child;
 import person.PeopleBucket;
+import person.Person;
 
 import java.util.HashMap;
 
@@ -13,11 +16,81 @@ public interface Strategy {
 
     public static MatchesBucket create(PeopleBucket bucket) {
         HashMap pairs = new HashMap();
-//        TODO: choose which matcher to use, based upon the Person fields that aren't null
         int size = bucket.getPeopleBucket().size();
         for (int i = 0; i < size; i++) {
+            Person p1 = bucket.getPeopleBucket().get(i);
             for (int j = 0; j < size; j++) {
-                
+                Person p2 = bucket.getPeopleBucket().get(j);
+
+                if(p1 instanceof Child && p2 instanceof Child) {
+                    if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getNewbornScreeningNumber() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getNewbornScreeningNumber() != null &&
+                            p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
+                            p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
+                        if(new matchID_BirthDate(p1, p2)) {
+
+                        }
+
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                            p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
+                            p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
+                        System.out.print("There are fields full 2");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                            p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
+                            p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
+                        System.out.print("There are fields full 3");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getBirthCounty() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getBirthCounty() != null &&
+                            p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
+                            p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
+                        System.out.print("There are fields full 4");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getIsPartOfMultipleBirth() != null || ((Child) p1).getBirthOrder() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getIsPartOfMultipleBirth() != null || ((Child) p2).getBirthOrder() != null &&
+                            p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
+                            p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
+                        System.out.print("There are fields full 4");
+                    }
+
+                } else if (p1 instanceof Adult && p2 instanceof Adult) {
+                    if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Adult) p1).getPhone1() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone1() != null &&
+                            p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
+                            p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
+                        System.out.print("There are fields full 1");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null &&
+                            p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
+                            p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
+                        System.out.print("There are fields full 2");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Adult) p1).getPhone2() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone2() != null &&
+                            p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
+                            p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
+                        System.out.print("There are fields full 3");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null &&
+                            p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
+                            p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
+                        System.out.print("There are fields full 4");
+
+                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Adult) p1).getPhone1() != null || ((Adult) p1).getPhone2() != null &&
+                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone1() != null || ((Adult) p2).getPhone2() != null &&
+                            p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
+                            p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
+                        System.out.print("There are fields full 4");
+                    }
+                }
+
+
 
 
 
