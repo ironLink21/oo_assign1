@@ -10,8 +10,11 @@ import static java.lang.Boolean.TRUE;
 /**
  * Created by seth on 9/15/16.
  */
-public class matchID_BirthDate {
+public class MatchID_BirthDate {
     Boolean StateFileNum = FALSE, SSN = FALSE, newBornNum = FALSE, bDay = FALSE, bMonth = FALSE, bYear = FALSE, phone1 = FALSE;
+
+    public MatchID_BirthDate() {
+    }
 
     public Boolean matchID_BirthDate(Person p1, Person p2) {
 

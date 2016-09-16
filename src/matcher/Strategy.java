@@ -16,6 +16,10 @@ public interface Strategy {
 
     public static MatchesBucket create(PeopleBucket bucket) {
         HashMap pairs = new HashMap();
+        MatchID_BirthDate matchID_BirthDate = new MatchID_BirthDate();
+        MatchMotherName_BirthDate matchMotherName_BirthDate = new MatchMotherName_BirthDate();
+        MatchNames_Gender matchNames_Gender = new MatchNames_Gender();
+
         int size = bucket.getPeopleBucket().size();
         for (int i = 0; i < size; i++) {
             Person p1 = bucket.getPeopleBucket().get(i);
@@ -27,28 +31,33 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getNewbornScreeningNumber() != null &&
                             p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
                             p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
-                        if(new matchID_BirthDate(p1, p2)) {
-
+                        if(matchID_BirthDate.matchID_BirthDate(p1,p2)) {
+                            pairs.put(p1,p2);
                         }
 
-
-                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
-                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                    } else if (p1.getStateFileNumber() != null || ((Child) p1).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                            p2.getStateFileNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
                             p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
                             p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
-                        System.out.print("There are fields full 2");
+                        if(matchMotherName_BirthDate.MatchMotherName_BirthDate(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
-                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
-                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                    } else if (p1.getSocialSecurityNumber() != null || ((Child) p1).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
+                            p2.getSocialSecurityNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        System.out.print("There are fields full 3");
+                        if(matchNames_Gender.matchNames_Gender(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
                     } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getBirthCounty() != null &&
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getBirthCounty() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        System.out.print("There are fields full 4");
+                        if(matchNames_Gender.matchNames_Gender(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
                     } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Child) p1).getIsPartOfMultipleBirth() != null || ((Child) p1).getBirthOrder() != null &&
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getIsPartOfMultipleBirth() != null || ((Child) p2).getBirthOrder() != null &&
@@ -62,13 +71,17 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone1() != null &&
                             p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
                             p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
-                        System.out.print("There are fields full 1");
+                        if(matchID_BirthDate.matchID_BirthDate(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
-                    } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null &&
-                            p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null &&
+                    } else if (p1.getStateFileNumber() != null &&
+                            p2.getStateFileNumber() != null &&
                             p1.getBirthDay() != null || p1.getBirthMonth() != null || p1.getBirthYear() != null &&
                             p2.getBirthDay() != null || p2.getBirthMonth() != null || p2.getBirthYear() != null) {
-                        System.out.print("There are fields full 2");
+                        if(matchMotherName_BirthDate.MatchMotherName_BirthDate(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
                     } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Adult) p1).getPhone2() != null &&
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone2() != null &&
