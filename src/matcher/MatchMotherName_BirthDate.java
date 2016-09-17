@@ -10,14 +10,14 @@ import static java.lang.Boolean.TRUE;
 /**
  * Created by seth on 9/16/16.
  */
-public class MatchMotherName_BirthDate {
+public class MatchMotherName_BirthDate implements Strategy {
     Boolean StateFileNum = FALSE, motherFirst = FALSE, motherLast = FALSE, bDay = FALSE, bMonth = FALSE, bYear = FALSE;
 
     public MatchMotherName_BirthDate() {
     }
 
-    public Boolean MatchMotherName_BirthDate(Person p1, Person p2) {
-
+    @Override
+    public Boolean matching(Person p1, Person p2) {
         if(p1 instanceof Child && p2 instanceof Child) {
             if(p1.getStateFileNumber() != null && p2.getStateFileNumber() != null && p1.getStateFileNumber().equals(p2.getStateFileNumber())) {
                 StateFileNum = TRUE;
@@ -67,5 +67,4 @@ public class MatchMotherName_BirthDate {
             return FALSE;
         }
     }
-
 }

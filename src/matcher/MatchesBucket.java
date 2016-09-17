@@ -1,5 +1,6 @@
 package matcher;
 
+import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import person.Person;
 
 import java.util.HashMap;
@@ -10,7 +11,10 @@ import java.util.HashMap;
 public class MatchesBucket {
     private HashMap<Person, Person> matchesBucket;
 
+
     //    constructor
+    public MatchesBucket(){}
+
     public MatchesBucket(HashMap<Person, Person> matchesBucket) {
         this.matchesBucket = matchesBucket;
     }

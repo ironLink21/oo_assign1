@@ -12,7 +12,7 @@ import java.util.HashMap;
  */
 public interface Strategy {
 
-    MatchesBucket matching(PeopleBucket bucket);
+    Boolean matching(Person p1, Person p2);
 
     public static MatchesBucket create(PeopleBucket bucket) {
         HashMap pairs = new HashMap();
@@ -33,7 +33,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getNewbornScreeningNumber() != null &&
                             p1.getBirthDay() != null && p1.getBirthMonth() != null && p1.getBirthYear() != null &&
                             p2.getBirthDay() != null && p2.getBirthMonth() != null && p2.getBirthYear() != null) {
-                        if(matchID_BirthDate.matchID_BirthDate(p1,p2)) {
+                        if(matchID_BirthDate.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -41,7 +41,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
                             p1.getBirthDay() != null && p1.getBirthMonth() != null && p1.getBirthYear() != null &&
                             p2.getBirthDay() != null && p2.getBirthMonth() != null && p2.getBirthYear() != null) {
-                        if(matchMotherName_BirthDate.MatchMotherName_BirthDate(p1,p2)) {
+                        if(matchMotherName_BirthDate.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -49,7 +49,7 @@ public interface Strategy {
                             p2.getSocialSecurityNumber() != null || ((Child) p2).getMotherFirstName() != null || ((Child) p1).getMotherLastName() != null &&
                             p1.getFirstName() != null && p1.getLastName() != null && p1.getGender() != null &&
                             p2.getFirstName() != null && p2.getLastName() != null && p2.getGender() != null) {
-                        if(matchNames_Gender.matchNames_Gender(p1,p2)) {
+                        if(matchNames_Gender.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -57,7 +57,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getBirthCounty() != null &&
                             p1.getFirstName() != null && p1.getLastName() != null && p1.getGender() != null &&
                             p2.getFirstName() != null && p2.getLastName() != null && p2.getGender() != null) {
-                        if(matchID_Names.matchID_Names(p1,p2)) {
+                        if(matchID_Names.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -65,7 +65,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getIsPartOfMultipleBirth() != null || ((Child) p2).getBirthOrder() != null &&
                             p1.getFirstName() != null && p1.getLastName() != null && p1.getGender() != null &&
                             p2.getFirstName() != null && p2.getLastName() != null && p2.getGender() != null) {
-                        if(matchMultiBirth_Gender.matchMultiBirth_Gender(p1,p2)) {
+                        if(matchMultiBirth_Gender.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
                     }
@@ -75,7 +75,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone1() != null &&
                             p1.getBirthDay() != null && p1.getBirthMonth() != null && p1.getBirthYear() != null &&
                             p2.getBirthDay() != null && p2.getBirthMonth() != null && p2.getBirthYear() != null) {
-                        if(matchID_BirthDate.matchID_BirthDate(p1,p2)) {
+                        if(matchID_BirthDate.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -83,7 +83,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null &&
                             p1.getBirthDay() != null && p1.getBirthMonth() != null && p1.getBirthYear() != null &&
                             p2.getBirthDay() != null && p2.getBirthMonth() != null && p2.getBirthYear() != null) {
-                        if(matchMotherName_BirthDate.MatchMotherName_BirthDate(p1,p2)) {
+                        if(matchMotherName_BirthDate.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -91,7 +91,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone2() != null &&
                             p1.getFirstName() != null && p1.getLastName() != null && p1.getGender() != null &&
                             p2.getFirstName() != null && p2.getLastName() != null && p2.getGender() != null) {
-                        if(matchNames_Gender.matchNames_Gender(p1,p2)) {
+                        if(matchNames_Gender.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -99,7 +99,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null &&
                             p1.getFirstName() != null && p1.getLastName() != null && p1.getGender() != null &&
                             p2.getFirstName() != null && p2.getLastName() != null && p2.getGender() != null) {
-                        if(matchID_Names.matchID_Names(p1,p2)) {
+                        if(matchID_Names.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -107,7 +107,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone1() != null || ((Adult) p2).getPhone2() != null &&
                             p1.getFirstName() != null && p1.getLastName() != null && p1.getGender() != null &&
                             p2.getFirstName() != null && p2.getLastName() != null && p2.getGender() != null) {
-                        if(matchMultiBirth_Gender.matchMultiBirth_Gender(p1,p2)) {
+                        if(matchMultiBirth_Gender.matching(p1,p2)) {
                             pairs.put(p1,p2);
                         }
                     }

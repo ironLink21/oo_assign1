@@ -1,4 +1,6 @@
+import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import matcher.Matcher;
+import matcher.MatchesBucket;
 import parser.Parser;
 import person.PeopleBucket;
 
@@ -25,9 +27,11 @@ public class main {
             PeopleBucket bucket = parser.openFile(fileSt);
 
             // run matchers
-            matcher.findMatches(bucket);
+            MatchesBucket matchesBucket = matcher.findMatches(bucket);
 
             // print results
+            results print = new results();
+            print.print(matchesBucket, "documents/matches.txt");
 
 
             System.out.print("finished");

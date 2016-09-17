@@ -10,14 +10,14 @@ import static java.lang.Boolean.TRUE;
 /**
  * Created by seth on 9/16/16.
  */
-public class MatchID_Names {
+public class MatchID_Names implements Strategy {
     Boolean StateFileNum = FALSE, SSN = FALSE, birthCounty = FALSE, firstName = FALSE, lastName = FALSE, gender = FALSE;
 
     public MatchID_Names() {
     }
 
-    public Boolean matchID_Names(Person p1, Person p2) {
-
+    @Override
+    public Boolean matching(Person p1, Person p2) {
         if(p1 instanceof Child && p2 instanceof Child) {
             if(p1.getStateFileNumber() != null && p2.getStateFileNumber() != null && p1.getStateFileNumber().equals(p2.getStateFileNumber())) {
                 StateFileNum = TRUE;

@@ -10,14 +10,14 @@ import static java.lang.Boolean.TRUE;
 /**
  * Created by seth on 9/16/16.
  */
-public class MatchNames_Gender {
+public class MatchNames_Gender implements Strategy {
     Boolean SSN = FALSE, motherFirst = FALSE, motherLast = FALSE, firstName = FALSE, lastName = FALSE, gender = FALSE, phone2 = FALSE;
 
     public MatchNames_Gender() {
     }
 
-    public Boolean matchNames_Gender(Person p1, Person p2) {
-
+    @Override
+    public Boolean matching(Person p1, Person p2) {
         if(p1 instanceof Child && p2 instanceof Child) {
             if(p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null && p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber())) {
                 SSN = TRUE;
