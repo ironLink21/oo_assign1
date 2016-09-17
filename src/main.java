@@ -32,9 +32,6 @@ public class main {
             // print results
             results print = new results();
             print.print(matchesBucket, "documents/matches.txt");
-
-
-            System.out.print("finished");
         }
     }
 }
