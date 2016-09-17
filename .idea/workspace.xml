@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05691b3c-cc13-4ede-b01b-1c15d7b46f67" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assign1_new/main.class" afterPath="$PROJECT_DIR$/out/production/assign1_new/main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assign1_new/parser/ParserJSON$1.class" afterPath="$PROJECT_DIR$/out/production/assign1_new/parser/ParserJSON$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assign1_new/parser/ParserJSON.class" afterPath="$PROJECT_DIR$/out/production/assign1_new/parser/ParserJSON.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/assign1_new/person/PeopleBucket.class" afterPath="$PROJECT_DIR$/out/production/assign1_new/person/PeopleBucket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java" afterPath="$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchID_Names.java" afterPath="$PROJECT_DIR$/src/matcher/MatchID_Names.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java" afterPath="$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchMultiBirth_Gender.java" afterPath="$PROJECT_DIR$/src/matcher/MatchMultiBirth_Gender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" afterPath="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/Strategy.java" afterPath="$PROJECT_DIR$/src/matcher/Strategy.java" />
-    </list>
+    <list default="true" id="05691b3c-cc13-4ede-b01b-1c15d7b46f67" name="Default" comment="" />
     <ignored path="assign1_new.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
