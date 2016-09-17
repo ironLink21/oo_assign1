@@ -10,25 +10,25 @@ import static java.lang.Boolean.TRUE;
 /**
  * Created by seth on 9/16/16.
  */
-public class MatchNames_Gender {
-    Boolean SSN = FALSE, motherFirst = FALSE, motherLast = FALSE, firstName = FALSE, lastName = FALSE, gender = FALSE, phone2 = FALSE;
+public class MatchID_Names {
+    Boolean StateFileNum = FALSE, SSN = FALSE, birthCounty = FALSE, firstName = FALSE, lastName = FALSE, gender = FALSE;
 
-    public MatchNames_Gender() {
+    public MatchID_Names() {
     }
 
-    public Boolean matchNames_Gender(Person p1, Person p2) {
+    public Boolean matchID_Names(Person p1, Person p2) {
 
         if(p1 instanceof Child && p2 instanceof Child) {
+            if(p1.getStateFileNumber().equals(p2.getStateFileNumber()) && p1.getStateFileNumber() != null && p2.getStateFileNumber() != null) {
+                StateFileNum = TRUE;
+            }
+
             if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) && p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null) {
                 SSN = TRUE;
             }
 
-            if(((Child) p1).getMotherFirstName().equals(((Child) p2).getMotherFirstName()) && ((Child) p1).getMotherFirstName() != null && ((Child) p2).getMotherFirstName() != null) {
-                motherFirst = TRUE;
-            }
-
-            if(((Child) p1).getMotherLastName().equals(((Child) p2).getMotherLastName()) && ((Child) p1).getMotherLastName() != null && ((Child) p2).getMotherLastName() != null) {
-                motherLast = TRUE;
+            if(((Child) p1).getBirthCounty().equals(((Child) p2).getBirthCounty()) && ((Child) p1).getBirthCounty() != null && ((Child) p2).getBirthCounty() != null) {
+                birthCounty = TRUE;
             }
 
             if(p1.getFirstName().equals(p2.getFirstName()) && p1.getFirstName() != null && p2.getFirstName() != null) {
@@ -44,6 +44,10 @@ public class MatchNames_Gender {
             }
 
         } else if (p1 instanceof Adult && p2 instanceof Adult) {
+            if(p1.getStateFileNumber().equals(p2.getStateFileNumber()) && p1.getStateFileNumber() != null && p2.getStateFileNumber() != null) {
+                StateFileNum = TRUE;
+            }
+
             if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) && p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null) {
                 SSN = TRUE;
             }
@@ -59,13 +63,9 @@ public class MatchNames_Gender {
             if(p1.getGender().equals(p2.getGender()) && p1.getGender() != null && p2.getGender() != null) {
                 gender = TRUE;
             }
-
-            if(((Adult) p1).getPhone2().equals(((Adult) p2).getPhone2()) && ((Adult) p1).getPhone2() != null && ((Adult) p2).getPhone2() != null) {
-                phone2 = TRUE;
-            }
         }
 
-        if( SSN || motherFirst || motherLast || firstName || lastName || gender ) {
+        if( StateFileNum || SSN || birthCounty || firstName || lastName || gender ) {
             return TRUE;
         } else {
             return FALSE;

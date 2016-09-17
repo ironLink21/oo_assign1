@@ -10,25 +10,29 @@ import static java.lang.Boolean.TRUE;
 /**
  * Created by seth on 9/16/16.
  */
-public class MatchNames_Gender {
-    Boolean SSN = FALSE, motherFirst = FALSE, motherLast = FALSE, firstName = FALSE, lastName = FALSE, gender = FALSE, phone2 = FALSE;
+public class MatchMultiBirth_Gender {
+    Boolean StateFileNum = FALSE, SSN = FALSE, multiBirth = FALSE, birthOrder = FALSE, firstName = FALSE, lastName = FALSE, gender = FALSE, phone1 = FALSE, phone2 = FALSE;
 
-    public MatchNames_Gender() {
+    public MatchMultiBirth_Gender() {
     }
 
-    public Boolean matchNames_Gender(Person p1, Person p2) {
+    public Boolean matchMultiBirth_Gender(Person p1, Person p2) {
 
         if(p1 instanceof Child && p2 instanceof Child) {
+            if(p1.getStateFileNumber().equals(p2.getStateFileNumber()) && p1.getStateFileNumber() != null && p2.getStateFileNumber() != null) {
+                StateFileNum = TRUE;
+            }
+
             if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) && p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null) {
                 SSN = TRUE;
             }
 
-            if(((Child) p1).getMotherFirstName().equals(((Child) p2).getMotherFirstName()) && ((Child) p1).getMotherFirstName() != null && ((Child) p2).getMotherFirstName() != null) {
-                motherFirst = TRUE;
+            if(((Child) p1).getIsPartOfMultipleBirth().equals(((Child) p2).getIsPartOfMultipleBirth()) && ((Child) p1).getIsPartOfMultipleBirth() != null && ((Child) p2).getIsPartOfMultipleBirth() != null) {
+                multiBirth = TRUE;
             }
 
-            if(((Child) p1).getMotherLastName().equals(((Child) p2).getMotherLastName()) && ((Child) p1).getMotherLastName() != null && ((Child) p2).getMotherLastName() != null) {
-                motherLast = TRUE;
+            if(((Child) p1).getBirthOrder().equals(((Child) p2).getBirthOrder()) && ((Child) p1).getBirthOrder() != null && ((Child) p2).getBirthOrder() != null) {
+                birthOrder = TRUE;
             }
 
             if(p1.getFirstName().equals(p2.getFirstName()) && p1.getFirstName() != null && p2.getFirstName() != null) {
@@ -44,6 +48,10 @@ public class MatchNames_Gender {
             }
 
         } else if (p1 instanceof Adult && p2 instanceof Adult) {
+            if(p1.getStateFileNumber().equals(p2.getStateFileNumber()) && p1.getStateFileNumber() != null && p2.getStateFileNumber() != null) {
+                StateFileNum = TRUE;
+            }
+
             if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) && p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null) {
                 SSN = TRUE;
             }
@@ -60,12 +68,16 @@ public class MatchNames_Gender {
                 gender = TRUE;
             }
 
+            if(((Adult) p1).getPhone1().equals(((Adult) p2).getPhone1()) && ((Adult) p1).getPhone1() != null && ((Adult) p2).getPhone1() != null) {
+                phone1 = TRUE;
+            }
+
             if(((Adult) p1).getPhone2().equals(((Adult) p2).getPhone2()) && ((Adult) p1).getPhone2() != null && ((Adult) p2).getPhone2() != null) {
                 phone2 = TRUE;
             }
         }
 
-        if( SSN || motherFirst || motherLast || firstName || lastName || gender ) {
+        if( StateFileNum || SSN || multiBirth || birthOrder || firstName || lastName || gender || phone1 || phone2) {
             return TRUE;
         } else {
             return FALSE;

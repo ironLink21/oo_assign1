@@ -19,6 +19,8 @@ public interface Strategy {
         MatchID_BirthDate matchID_BirthDate = new MatchID_BirthDate();
         MatchMotherName_BirthDate matchMotherName_BirthDate = new MatchMotherName_BirthDate();
         MatchNames_Gender matchNames_Gender = new MatchNames_Gender();
+        MatchID_Names matchID_Names = new MatchID_Names();
+        MatchMultiBirth_Gender matchMultiBirth_Gender = new MatchMultiBirth_Gender();
 
         int size = bucket.getPeopleBucket().size();
         for (int i = 0; i < size; i++) {
@@ -55,7 +57,7 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getBirthCounty() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        if(matchNames_Gender.matchNames_Gender(p1,p2)) {
+                        if(matchID_Names.matchID_Names(p1,p2)) {
                             pairs.put(p1,p2);
                         }
 
@@ -63,7 +65,9 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Child) p2).getIsPartOfMultipleBirth() != null || ((Child) p2).getBirthOrder() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        System.out.print("There are fields full 4");
+                        if(matchMultiBirth_Gender.matchMultiBirth_Gender(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
                     }
 
                 } else if (p1 instanceof Adult && p2 instanceof Adult) {
@@ -87,29 +91,27 @@ public interface Strategy {
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone2() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        System.out.print("There are fields full 3");
+                        if(matchNames_Gender.matchNames_Gender(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
                     } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null &&
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        System.out.print("There are fields full 4");
+                        if(matchID_Names.matchID_Names(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
 
                     } else if (p1.getStateFileNumber() != null || p1.getSocialSecurityNumber() != null || ((Adult) p1).getPhone1() != null || ((Adult) p1).getPhone2() != null &&
                             p2.getStateFileNumber() != null || p2.getSocialSecurityNumber() != null || ((Adult) p2).getPhone1() != null || ((Adult) p2).getPhone2() != null &&
                             p1.getFirstName() != null || p1.getLastName() != null || p1.getGender() != null &&
                             p2.getFirstName() != null || p2.getLastName() != null || p2.getGender() != null) {
-                        System.out.print("There are fields full 4");
+                        if(matchMultiBirth_Gender.matchMultiBirth_Gender(p1,p2)) {
+                            pairs.put(p1,p2);
+                        }
                     }
                 }
-
-
-
-
-
-
-
-
             }
         }
 

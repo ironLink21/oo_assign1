@@ -1,3 +1,4 @@
+import matcher.Matcher;
 import parser.Parser;
 import person.PeopleBucket;
 
@@ -14,6 +15,7 @@ public class main {
         if(file.exists()) {
             String fileSt = file.getAbsolutePath();
             Parser parser = Parser.create(fileSt);
+            Matcher matcher = new Matcher();
 
             if(parser == null) {
                 System.out.print("Incorrect File Type");
@@ -23,6 +25,7 @@ public class main {
             PeopleBucket bucket = parser.openFile(fileSt);
 
             // run matchers
+            matcher.findMatches(bucket);
 
             // print results
 

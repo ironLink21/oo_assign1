@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05691b3c-cc13-4ede-b01b-1c15d7b46f67" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/matcher/matchID_BirthDate.java" afterPath="$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matcher/MatchID_Names.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/matcher/MatchMultiBirth_Gender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" afterPath="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/Strategy.java" afterPath="$PROJECT_DIR$/src/matcher/Strategy.java" />
     </list>
     <ignored path="assign1_new.iws" />
@@ -26,159 +26,125 @@
     <favorites_list name="assign1_new" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7116725">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="50" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Strategy.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/matcher/Strategy.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Child.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/person/Child.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#1365#1366#0" expanded="false" />
-                    <element signature="e#1410#1411#0" expanded="false" />
-                    <element signature="e#1602#1603#0" expanded="false" />
-                    <element signature="e#1646#1647#0" expanded="false" />
-                    <element signature="e#1824#1825#0" expanded="false" />
-                    <element signature="e#1857#1858#0" expanded="false" />
-                    <element signature="e#1910#1911#0" expanded="false" />
-                    <element signature="e#1954#1955#0" expanded="false" />
-                    <element signature="e#1992#1993#0" expanded="false" />
-                    <element signature="e#2026#2027#0" expanded="false" />
-                    <element signature="e#2080#2081#0" expanded="false" />
-                    <element signature="e#2126#2127#0" expanded="false" />
-                    <element signature="e#2168#2169#0" expanded="false" />
-                    <element signature="e#2206#2207#0" expanded="false" />
-                    <element signature="e#2268#2269#0" expanded="false" />
-                    <element signature="e#2322#2323#0" expanded="false" />
-                    <element signature="e#2365#2366#0" expanded="false" />
-                    <element signature="e#2404#2405#0" expanded="false" />
-                    <element signature="e#2468#2469#0" expanded="false" />
-                    <element signature="e#2524#2525#0" expanded="false" />
-                    <element signature="e#2565#2566#0" expanded="false" />
-                    <element signature="e#2602#2603#0" expanded="false" />
-                    <element signature="e#2662#2663#0" expanded="false" />
-                    <element signature="e#2714#2715#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/person/Person.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="20" column="35" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#1693#1694#0" expanded="false" />
-                    <element signature="e#1724#1725#0" expanded="false" />
-                    <element signature="e#1773#1774#0" expanded="false" />
-                    <element signature="e#1813#1814#0" expanded="false" />
-                    <element signature="e#1855#1856#0" expanded="false" />
-                    <element signature="e#1893#1894#0" expanded="false" />
-                    <element signature="e#1955#1956#0" expanded="false" />
-                    <element signature="e#2009#2010#0" expanded="false" />
-                    <element signature="e#2056#2057#0" expanded="false" />
-                    <element signature="e#2099#2100#0" expanded="false" />
-                    <element signature="e#2271#2272#0" expanded="false" />
-                    <element signature="e#2303#2304#0" expanded="false" />
-                    <element signature="e#2353#2354#0" expanded="false" />
-                    <element signature="e#2395#2396#0" expanded="false" />
-                    <element signature="e#2432#2433#0" expanded="false" />
-                    <element signature="e#2465#2466#0" expanded="false" />
-                    <element signature="e#2517#2518#0" expanded="false" />
-                    <element signature="e#2561#2562#0" expanded="false" />
-                    <element signature="e#2596#2597#0" expanded="false" />
-                    <element signature="e#2627#2628#0" expanded="false" />
-                    <element signature="e#2675#2676#0" expanded="false" />
-                    <element signature="e#2715#2716#0" expanded="false" />
-                    <element signature="e#2751#2752#0" expanded="false" />
-                    <element signature="e#2783#2784#0" expanded="false" />
-                    <element signature="e#2833#2834#0" expanded="false" />
-                    <element signature="e#2875#2876#0" expanded="false" />
-                    <element signature="e#2913#2914#0" expanded="false" />
-                    <element signature="e#2946#2947#0" expanded="false" />
-                    <element signature="e#2999#3000#0" expanded="false" />
-                    <element signature="e#3043#3044#0" expanded="false" />
-                    <element signature="e#3079#3080#0" expanded="false" />
-                    <element signature="e#3110#3111#0" expanded="false" />
-                    <element signature="e#3159#3160#0" expanded="false" />
-                    <element signature="e#3199#3200#0" expanded="false" />
-                    <element signature="e#3232#3233#0" expanded="false" />
-                    <element signature="e#3261#3262#0" expanded="false" />
-                    <element signature="e#3305#3306#0" expanded="false" />
-                    <element signature="e#3341#3342#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MatchID_BirthDate.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="183">
-                  <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MatchNames_Gender.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/matcher/MatchNames_Gender.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MatchMotherName_BirthDate.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Strategy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matcher/Strategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2106">
+              <caret line="117" column="40" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Matcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matcher/Matcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Child.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/person/Child.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding>
+                <element signature="e#1365#1366#0" expanded="false" />
+                <element signature="e#1410#1411#0" expanded="false" />
+                <element signature="e#1602#1603#0" expanded="false" />
+                <element signature="e#1646#1647#0" expanded="false" />
+                <element signature="e#1824#1825#0" expanded="false" />
+                <element signature="e#1857#1858#0" expanded="false" />
+                <element signature="e#1910#1911#0" expanded="false" />
+                <element signature="e#1954#1955#0" expanded="false" />
+                <element signature="e#1992#1993#0" expanded="false" />
+                <element signature="e#2026#2027#0" expanded="false" />
+                <element signature="e#2080#2081#0" expanded="false" />
+                <element signature="e#2126#2127#0" expanded="false" />
+                <element signature="e#2168#2169#0" expanded="false" />
+                <element signature="e#2206#2207#0" expanded="false" />
+                <element signature="e#2268#2269#0" expanded="false" />
+                <element signature="e#2322#2323#0" expanded="false" />
+                <element signature="e#2365#2366#0" expanded="false" />
+                <element signature="e#2404#2405#0" expanded="false" />
+                <element signature="e#2468#2469#0" expanded="false" />
+                <element signature="e#2524#2525#0" expanded="false" />
+                <element signature="e#2565#2566#0" expanded="false" />
+                <element signature="e#2602#2603#0" expanded="false" />
+                <element signature="e#2662#2663#0" expanded="false" />
+                <element signature="e#2714#2715#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/person/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1693#1694#0" expanded="false" />
+                <element signature="e#1724#1725#0" expanded="false" />
+                <element signature="e#1773#1774#0" expanded="false" />
+                <element signature="e#1813#1814#0" expanded="false" />
+                <element signature="e#1855#1856#0" expanded="false" />
+                <element signature="e#1893#1894#0" expanded="false" />
+                <element signature="e#1955#1956#0" expanded="false" />
+                <element signature="e#2009#2010#0" expanded="false" />
+                <element signature="e#2056#2057#0" expanded="false" />
+                <element signature="e#2099#2100#0" expanded="false" />
+                <element signature="e#2271#2272#0" expanded="false" />
+                <element signature="e#2303#2304#0" expanded="false" />
+                <element signature="e#2353#2354#0" expanded="false" />
+                <element signature="e#2395#2396#0" expanded="false" />
+                <element signature="e#2432#2433#0" expanded="false" />
+                <element signature="e#2465#2466#0" expanded="false" />
+                <element signature="e#2517#2518#0" expanded="false" />
+                <element signature="e#2561#2562#0" expanded="false" />
+                <element signature="e#2596#2597#0" expanded="false" />
+                <element signature="e#2627#2628#0" expanded="false" />
+                <element signature="e#2675#2676#0" expanded="false" />
+                <element signature="e#2715#2716#0" expanded="false" />
+                <element signature="e#2751#2752#0" expanded="false" />
+                <element signature="e#2783#2784#0" expanded="false" />
+                <element signature="e#2833#2834#0" expanded="false" />
+                <element signature="e#2875#2876#0" expanded="false" />
+                <element signature="e#2913#2914#0" expanded="false" />
+                <element signature="e#2946#2947#0" expanded="false" />
+                <element signature="e#2999#3000#0" expanded="false" />
+                <element signature="e#3043#3044#0" expanded="false" />
+                <element signature="e#3079#3080#0" expanded="false" />
+                <element signature="e#3110#3111#0" expanded="false" />
+                <element signature="e#3159#3160#0" expanded="false" />
+                <element signature="e#3199#3200#0" expanded="false" />
+                <element signature="e#3232#3233#0" expanded="false" />
+                <element signature="e#3261#3262#0" expanded="false" />
+                <element signature="e#3305#3306#0" expanded="false" />
+                <element signature="e#3341#3342#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -200,7 +166,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/parser/ParserXML.java" />
         <option value="$PROJECT_DIR$/src/parser/SafeDeserializer.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/person/Adult.java" />
         <option value="$PROJECT_DIR$/src/person/Child.java" />
         <option value="$PROJECT_DIR$/src/person/Person.java" />
@@ -215,9 +180,12 @@
         <option value="$PROJECT_DIR$/src/matcher/matchID_BirthDate.java" />
         <option value="$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java" />
         <option value="$PROJECT_DIR$/src/matcher/matchMotherName_BirthDate.java" />
-        <option value="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" />
         <option value="$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java" />
+        <option value="$PROJECT_DIR$/src/matcher/MatchNames_Gender.java" />
+        <option value="$PROJECT_DIR$/src/matcher/MatchID_Names.java" />
+        <option value="$PROJECT_DIR$/src/matcher/MatchMultiBirth_Gender.java" />
         <option value="$PROJECT_DIR$/src/matcher/Strategy.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
       </list>
     </option>
   </component>
@@ -691,7 +659,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15959005" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1749634" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874617" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -727,7 +695,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main.java</url>
-          <line>29</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -1266,14 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matcher/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parser/ParserJSON.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23">
@@ -1285,14 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1399,10 +1351,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java">
+    <entry file="file://$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="558">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1411,18 +1363,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matcher/MatchNames_Gender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="259">
+          <caret line="62" column="136" selection-start-line="62" selection-start-column="136" selection-end-line="62" selection-end-column="136" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDate.java">
+    <entry file="file://$PROJECT_DIR$/src/matcher/MatchID_Names.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="349">
+          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matcher/MatchID_BirthDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matcher/MatchMultiBirth_Gender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1431,11 +1403,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matcher/Strategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+        <state relative-caret-position="2106">
+          <caret line="117" column="40" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matcher/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
