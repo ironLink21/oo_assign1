@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05691b3c-cc13-4ede-b01b-1c15d7b46f67" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.java" afterPath="$PROJECT_DIR$/src/main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchID_BirthDateTest.groovy" afterPath="$PROJECT_DIR$/src/matcher/MatchID_BirthDateTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchID_NamesTest.groovy" afterPath="$PROJECT_DIR$/src/matcher/MatchID_NamesTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDateTest.groovy" afterPath="$PROJECT_DIR$/src/matcher/MatchMotherName_BirthDateTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchMultiBirth_GenderTest.groovy" afterPath="$PROJECT_DIR$/src/matcher/MatchMultiBirth_GenderTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matcher/MatchNames_GenderTest.groovy" afterPath="$PROJECT_DIR$/src/matcher/MatchNames_GenderTest.groovy" />
-    </list>
+    <list default="true" id="05691b3c-cc13-4ede-b01b-1c15d7b46f67" name="Default" comment="" />
     <ignored path="assign1_new.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
