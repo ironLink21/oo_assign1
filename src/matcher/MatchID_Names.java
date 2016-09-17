@@ -19,48 +19,48 @@ public class MatchID_Names {
     public Boolean matchID_Names(Person p1, Person p2) {
 
         if(p1 instanceof Child && p2 instanceof Child) {
-            if(p1.getStateFileNumber().equals(p2.getStateFileNumber()) && p1.getStateFileNumber() != null && p2.getStateFileNumber() != null) {
+            if(p1.getStateFileNumber() != null && p2.getStateFileNumber() != null && p1.getStateFileNumber().equals(p2.getStateFileNumber())) {
                 StateFileNum = TRUE;
             }
 
-            if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) && p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null) {
+            if(p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null && p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber())) {
                 SSN = TRUE;
             }
 
-            if(((Child) p1).getBirthCounty().equals(((Child) p2).getBirthCounty()) && ((Child) p1).getBirthCounty() != null && ((Child) p2).getBirthCounty() != null) {
+            if(((Child) p1).getBirthCounty() != null && ((Child) p2).getBirthCounty() != null && ((Child) p1).getBirthCounty().equals(((Child) p2).getBirthCounty())) {
                 birthCounty = TRUE;
             }
 
-            if(p1.getFirstName().equals(p2.getFirstName()) && p1.getFirstName() != null && p2.getFirstName() != null) {
+            if(p1.getFirstName() != null && p2.getFirstName() != null && p1.getFirstName().equals(p2.getFirstName())) {
                 firstName = TRUE;
             }
 
-            if(p1.getLastName().equals(p2.getLastName()) && p1.getLastName() != null && p2.getLastName() != null) {
+            if(p1.getLastName() != null && p2.getLastName() != null && p1.getLastName().equals(p2.getLastName())) {
                 lastName = TRUE;
             }
 
-            if(p1.getGender().equals(p2.getGender()) && p1.getGender() != null && p2.getGender() != null) {
+            if(p1.getGender() != null && p2.getGender() != null && p1.getGender().equals(p2.getGender())) {
                 gender = TRUE;
             }
 
         } else if (p1 instanceof Adult && p2 instanceof Adult) {
-            if(p1.getStateFileNumber().equals(p2.getStateFileNumber()) && p1.getStateFileNumber() != null && p2.getStateFileNumber() != null) {
+            if(p1.getStateFileNumber() != null && p2.getStateFileNumber() != null && p1.getStateFileNumber().equals(p2.getStateFileNumber())) {
                 StateFileNum = TRUE;
             }
 
-            if(p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber()) && p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null) {
+            if(p1.getSocialSecurityNumber() != null && p2.getSocialSecurityNumber() != null && p1.getSocialSecurityNumber().equals(p2.getSocialSecurityNumber())) {
                 SSN = TRUE;
             }
 
-            if(p1.getFirstName().equals(p2.getFirstName()) && p1.getFirstName() != null && p2.getFirstName() != null) {
+            if(p1.getFirstName() != null && p2.getFirstName() != null && p1.getFirstName().equals(p2.getFirstName())) {
                 firstName = TRUE;
             }
 
-            if(p1.getLastName().equals(p2.getLastName()) && p1.getLastName() != null && p2.getLastName() != null) {
+            if(p1.getLastName() != null && p2.getLastName() != null && p1.getLastName().equals(p2.getLastName())) {
                 lastName = TRUE;
             }
 
-            if(p1.getGender().equals(p2.getGender()) && p1.getGender() != null && p2.getGender() != null) {
+            if(p1.getGender() != null && p2.getGender() != null && p1.getGender().equals(p2.getGender())) {
                 gender = TRUE;
             }
         }
